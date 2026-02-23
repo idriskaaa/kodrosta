@@ -26,6 +26,8 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Ссылка на лендинг/оплату
 LANDING_URL = "https://hamduh.su"
+PAY_URL_OFFLINE = "https://payform.ru/4qaH5mp/"
+PAY_URL_ONLINE = "https://payform.ru/ngaH5hB/"
 
 # Ссылка на бота (для кнопки «Поделиться»)
 BOT_USERNAME = "diagnostkartaBot"
