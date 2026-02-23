@@ -392,12 +392,14 @@ def get_answer_keyboard() -> InlineKeyboardMarkup:
     ])
 
 def get_final_keyboard() -> InlineKeyboardMarkup:
-    """Клавиатура после результатов — с кнопкой бронирования и «Поделиться»"""
+    """Клавиатура после результатов — с прямыми ссылками на оплату"""
     share_text = "Прошёл диагностику бизнеса за 3 минуты — бот показал, где теряю деньги. Попробуй:"
     share_url = f"https://t.me/{BOT_USERNAME}"
     
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🔥 ЗАБРОНИРОВАТЬ МЕСТО", url=LANDING_URL)],
+        [InlineKeyboardButton(text="🔥 ЗАПИСАТЬСЯ ОФЛАЙН (Москва)", url=PAY_URL_OFFLINE)],
+        [InlineKeyboardButton(text="💻 ЗАПИСАТЬСЯ ОНЛАЙН", url=PAY_URL_ONLINE)],
+        [InlineKeyboardButton(text="📋 Подробнее на сайте", url=LANDING_URL)],
         [InlineKeyboardButton(
             text="📤 Отправить другу",
             url=f"https://t.me/share/url?url={share_url}&text={share_text}"
@@ -411,7 +413,8 @@ def get_details_keyboard() -> InlineKeyboardMarkup:
     
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="📊 Подробный разбор по блокам", callback_data="show_details")],
-        [InlineKeyboardButton(text="🔥 ЗАБРОНИРОВАТЬ МЕСТО", url=LANDING_URL)],
+        [InlineKeyboardButton(text="🔥 ЗАПИСАТЬСЯ ОФЛАЙН (Москва)", url=PAY_URL_OFFLINE)],
+        [InlineKeyboardButton(text="💻 ЗАПИСАТЬСЯ ОНЛАЙН", url=PAY_URL_ONLINE)],
         [InlineKeyboardButton(
             text="📤 Отправить другу",
             url=f"https://t.me/share/url?url={share_url}&text={share_text}"
@@ -421,7 +424,8 @@ def get_details_keyboard() -> InlineKeyboardMarkup:
 def get_followup_keyboard() -> InlineKeyboardMarkup:
     """Клавиатура для follow-up сообщений"""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="🔥 ЗАБРОНИРОВАТЬ МЕСТО", url=LANDING_URL)]
+        [InlineKeyboardButton(text="🔥 ЗАПИСАТЬСЯ ОФЛАЙН (Москва)", url=PAY_URL_OFFLINE)],
+        [InlineKeyboardButton(text="💻 ЗАПИСАТЬСЯ ОНЛАЙН", url=PAY_URL_ONLINE)]
     ])
 
 # ============== ОБРАБОТЧИКИ ==============
