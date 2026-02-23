@@ -8,6 +8,7 @@ Telegram-бот "Диагностика КОД РОСТА"
 """
 
 import asyncio
+import os
 import logging
 import aiohttp
 from datetime import datetime, date
