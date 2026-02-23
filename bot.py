@@ -21,7 +21,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
 # ============== НАСТРОЙКИ ==============
-BOT_TOKEN = "8526921533:AAEcAzXkuXeqGw-do7jwXSikuzr2W8kuwLc"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Ссылка на лендинг/оплату
 LANDING_URL = "https://hamduh.su"
